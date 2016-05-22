@@ -1,0 +1,45 @@
+.main_container {
+    margin: 0px auto;
+    padding-top: 20px;
+}
+.reg_forms {
+    margin: 0px auto;
+    max-width: 300px;
+    
+    
+}
+.reg_form_head h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+.reg_form_head {
+    width: 100%;
+    color: #6C6969;
+    padding: 10px 25px;
+    border: 1px solid #B1B1B1;
+    
+    
+}
+.reg_form_body {
+     padding: 15px; 
+     border-top: 1px solid #B1B1B1;
+     border: 1px solid #B1B1B1;
+     border-top: none;
+}
+.input-group {
+     margin-bottom: 10px;   
+}
+
+.btn-hor-user2 {
+    font-size: 14px;
+    border-radius: 0px;
+    background: #787878;
+    border: 0px;
+}
+.btn-hor-user2:hover {
+    font-size: 14px;
+    border-radius: 0px;
+    background: grey;
+    border: 0px;
+}
