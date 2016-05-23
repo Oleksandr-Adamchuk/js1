@@ -2,8 +2,6 @@
 var Person = {};
 function myFunction() {
 var elements = document.getElementsByTagName("input");
-console.log(elements);
-
 for (var i = 0; i < elements.length; i++) {
     if(elements[i].id == "name") {
         Person.name = elements[i].value;
@@ -17,43 +15,43 @@ for (var i = 0; i < elements.length; i++) {
      if(elements[i].id == "email") {
         Person.email = elements[i].value;
     }
-
 }    
-console.log(Person);
-alert ("Об'єкт створено");
-                        /* Find object length */
 
-
- 
-function checkDate (input){
-  var pattern =/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
-  if (!input.match(pattern))  {
-     alert("Будь ласка введіть дату у форматі dd/mm/yyyy"); 
-  };
-  
-  var date_value = input.split("/");
-  
-  if (date_value[2] < 1900 || date_value[2] > 2016) {
-      document.getElementById("year").innerHTML = 
-      "Рік народження може бути між 1900 та 2016"
-  } 
-}
-checkDate(document.getElementById("date").value);
+    console.log(Person) ;
+/*------- Функція перевірки коректеного e-mail ------*/
+    function checkEmail(input) {
+        var pattern = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+        if (pattern.test(input) == false) {
+            alert ("Введіть коректне значення адресу електронної пошти");
+        }
+    }
+    checkEmail(document.getElementById("email").value); 
     
+/*---- Функція перевірки коректеного року з дати народження ----*/
+    function checkDate (input){
+      var pattern =/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
+      if (!input.match(pattern))  {
+         alert("Будь ласка введіть дату у форматі dd/mm/yyyy"); 
+      };
+      
+      var date_value = input.split("/");
+      
+      if (date_value[2] < 1900 || date_value[2] > 2016) {
+          document.getElementById("year").innerHTML = 
+          "Рік народження може бути між 1900 та 2016"
+      } 
+    }
+    checkDate(document.getElementById("date").value);
+    document.getElementById("myForm").reset();
 }
-var Person2 = Person;
-console.log(Person2);
+
+
 var obj_length = Object.keys(Person).length;
-  function myTable() {
+ function myTable() {
         var body = document.getElementsByTagName("body")[0];
         var tbl     = document.createElement("table");
         var tblBody = document.createElement("tbody");
         var row1 = document.createElement("tr");
-
-           
-                // create element <td> and text node 
-                //Make text node the contents of <td> element
-                // put <td> at end of the table row
             var cell = document.createElement("td");    
             var cellText = document.createTextNode("User Name"); 
                 cell.appendChild(cellText);
@@ -72,10 +70,7 @@ var obj_length = Object.keys(Person).length;
                 row1.appendChild(cell);
         
         var row2 = document.createElement("tr");
-           // create element <td> and text node 
-                //Make text node the contents of <td> element
-                // put <td> at end of the table row
-            var cell = document.createElement("td");    
+                var cell = document.createElement("td");    
             var cellText = document.createTextNode(Person.name); 
                 cell.appendChild(cellText);
                 row2.appendChild(cell);
@@ -91,21 +86,12 @@ var obj_length = Object.keys(Person).length;
             var cellText = document.createTextNode(Person.email); 
                 cell.appendChild(cellText);
                 row2.appendChild(cell);
-      
-
-            //row added to end of table body
             tblBody.appendChild(row1);
             tblBody.appendChild(row2);
-   
-
-        // append the <tbody> inside the <table>
-        tbl.appendChild(tblBody);
-        // put <table> in the <body>
+           tbl.appendChild(tblBody);
         body.appendChild(tbl);
-        // tbl border attribute to 
-        tbl.setAttribute("border", "2");
+       
     }
-
 
 
 

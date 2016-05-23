@@ -43,3 +43,14 @@
     background: grey;
     border: 0px;
 }
+td {
+    padding: 10px;
+    border: 1px solid grey;
+}
+#year {
+    color: red;
+    font-weight: bold;
+}
+table {
+    border: 1px solid grey;
+}
