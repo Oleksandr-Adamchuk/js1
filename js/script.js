@@ -37,8 +37,7 @@ for (var i = 0; i < elements.length; i++) {
       var date_value = input.split("/");
       
       if (date_value[2] < 1900 || date_value[2] > 2016) {
-          document.getElementById("year").innerHTML = 
-          "Рік народження може бути між 1900 та 2016"
+          alert("Рік народження може бути між 1900 та 2016")
       } 
     }
     checkDate(document.getElementById("date").value);
@@ -48,7 +47,7 @@ for (var i = 0; i < elements.length; i++) {
 
 var obj_length = Object.keys(Person).length;
  function myTable() {
-        var body = document.getElementsByTagName("body")[0];
+        var body = document.getElementById("for_table");
         var tbl     = document.createElement("table");
         var tblBody = document.createElement("tbody");
         var row1 = document.createElement("tr");
